@@ -1,0 +1,223 @@
+@import 'https://htmldemo.net/corano/corano/assets/css/vendor/pe-icon-7-stroke.css';
+@import 'https://htmldemo.net/corano/corano/assets/css/vendor/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900';
+
+body
+{
+    color: black;
+    font-family: Lato;
+    font-size: 15px;
+}
+.border
+{
+    border-bottom: 1px solid #efefef;
+}
+.esharegar
+{
+    cursor: pointer;
+}
+.home
+{
+    color: darkgoldenrod;
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+.linkhover
+{
+    color:black;
+    transition: color 0.4s ease-in-out;
+    
+}
+.linkhover:hover
+{
+    cursor: pointer;
+    color: darkgoldenrod;
+    
+}
+
+
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.padding
+{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.menu li
+{
+    display: inline-block;
+    list-style: none;
+    
+}
+.sub 
+{
+    z-index: 1;
+    border: 1px solid #efefef;
+    width: 110px;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(30px);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+li:hover .sub
+{
+    background-color: #fff;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease-in-out;
+}
+.sub li
+{
+    padding-top: 10px;
+}
+/* تا اینجا کدها اوکیه
+*/
+
+.container
+{
+    position: relative;
+    display: inline-block;
+}
+.overlay
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: darkgoldenrod;
+    color: white;
+    border-radius:50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+}
+
+
+.ghabl::before
+{
+    margin-right: 20px;
+    content: "|";
+    color: #efefef;
+}
+.icon
+{
+    margin-left: 20px;
+    color: rgb(128, 128, 128);
+}
+
+
+.icon1
+{
+    font-size: 25px;
+    margin-left: 20px;
+}
+.menu > ul >li 
+{
+    margin-left: 30px;
+}
+.menu>ul>li>ul
+{
+    width: 200px;
+    
+    padding-left: 5px;
+    
+}
+.borderdash>li:not(:last-of-type)
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    
+    border-bottom: 1px dashed #efefef;
+   
+}
+.sub .after-dash::after
+{
+    content: " ";
+    width: 0px;
+    height: 2px;
+    margin: 0 3px;
+    background-color: darkgoldenrod;
+    transition: width 0.6s ease-in;
+}
+.sub>li:hover .after-dash::after
+{
+    width: 10px;
+    color: darkgoldenrod;
+}
+/* استایل های اسلایدر */
+
+*
+{
+    box-sizing: border-box;
+}
+.badane
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+}
+.slider
+{
+    width: 100%;
+    overflow: hidden;
+    position: relative; 
+}
+.slides
+{
+    display: flex;
+    transition: all 0.9s ease;
+}
+.slides .slide
+{
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.slides .slide img
+{
+    width: 100%;
+}
+.fade{
+    animation: fade 1s;
+}
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.prev , .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #777777;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s  ease;
+    border-radius: 0 3px 3px 0;
+}
+.next
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev
+{
+    left: 0;
+}
