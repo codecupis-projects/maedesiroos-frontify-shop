@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corano</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body dir="ltr">
   <header>
@@ -73,12 +73,12 @@
           <ul >
           <li> <a href="#" class="home"> Home  </span><i class="fa fa-angle-down "></i></a> 
             <ul class="sub borderdash" >
-              <li ><a href="#" class="after-dash">Home Version 01</a> </li>
-              <li ><a href="#" class="after-dash">Home Version 02</a> </li>
-              <li ><a href="#" class="after-dash">Home Version 03</a> </li>
-              <li><a href="#"  class="after-dash">Home Version 04</a> </li>
-              <li ><a href="#" class="after-dash">Home Version 05</a> </li>
-              <li ><a href="#" class="after-dash">Home Version 06</a> </li>
+              <li ><a href="#">Home Version 01</a> </li>
+              <li ><a href="#">Home Version 02</a> </li>
+              <li ><a href="#">Home Version 03</a> </li>
+              <li ><a href="#">Home Version 04</a> </li>
+              <li ><a href="#">Home Version 05</a> </li>
+              <li ><a href="#">Home Version 06</a> </li>
               </ul>
           </li>
           <li><a href="#"class="linkhover">Pages<i class="fa fa-angle-down "></i></a></li>
@@ -97,18 +97,30 @@
         
     </center>
   </header>  
-  <div class="slider badane">
-    <div class="slides ">
-      <div class="slide fade">
-        <img src="slide1.webp" alt="slide1">
-      </div>
-      <div class="slide fade">
-        <img src="slide2.webp" alt="slide2">
+  <section class="slider">
+    <div class="slide" style="background-image: url('slide1.webp');">
+      <div class="slide-info">
+        <h2 class="slide-title">
+          Family Jewelry Collection
+        </h2>
+        <h4 class="slide-description">
+          Designer Jewelry Necklaces-Bracelets-Earings
+        </h4>
+        <a href="#" class="readmore">Read More</a>
       </div>
     </div>
-    <a class="prev" onclick="changeslide(-1)">&#10094;</a>
-    <a class="next" onclick="changeslide(1)">&#10095;</a>
-  </div>
-  <script src="script.js"></script>
+    <div class="slide" style="background-image: url('slide2.webp');">
+      <div class="slide-info">
+        <h2 class="slide-title">
+          Pearls Spring Collction
+        </h2>
+        <h4 class="slide-description">
+          New pearl earrings and more from $99
+        </h4>
+        <a href="#" class="readmore">Read More</a>
+      </div>
+    </div>
+  </section>
+<script src="script.js"></script>
 </body>
 </html>
