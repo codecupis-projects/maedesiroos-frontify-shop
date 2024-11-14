@@ -1,15 +1,17 @@
-const slides=document.querySelector(".slides");
-const slideCount=slides.children.length;
-let index=0;
+const slides = document.querySelectorAll(".slide")
 
-function showslide(){
-    index=(index+1)%slideCount;
-    slides.style.transform=`translateX(${-index*100}%)`;
+const sliderModule = function () {
+  let counter = 0
+  let lastItem = 0
+  const sliderTimer = 250
+
+  let showSlide = setTimeout(function show() {
+    slides[lastItem].classList.remove("active-slide")
+    slides[counter].classList.add("active-slide")
+    lastItem = counter
+    counter < slides.length - 1 ? counter++ : (counter = 0)
+    showSlide = setTimeout(show, sliderTimer * 16)
+  }, sliderTimer)
 }
 
-setInterval(showslide,5000);
-
-function changeslide(n){
-    index +=n-1;
-    showslide();
-}
+sliderModule()
