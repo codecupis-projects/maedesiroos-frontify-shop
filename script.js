@@ -8,5 +8,7 @@ const showslide = function () {
     slides[counter].classList.add("active-slide")
     lastItem = counter
     counter < slides.length - 1 ? counter++ : (counter = 0)
-    showSlide = setTimeout(show, timer * 16) }, timer) }
+    showSlide = setTimeout(show, timer * 16)
+  }, timer)
+}
 showslide()
